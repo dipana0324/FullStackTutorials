@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Recipe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and div */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        div {
+            padding: 10px;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffd700;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: darkred; /* inline CSS can stay for practice */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation menu */
+        nav {
+            background-color: #eee;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: darkred;
+        }
+
+        /* Sections using class selector */
+        .recipe-section {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin: 15px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Section headings */
+        section h2 {
+            color: darkred;
+            margin-bottom: 10px;
+        }
+
+        /* Lists styling */
+        ul li {
+            list-style: square;
+            margin-left: 20px;
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        ol li {
+            margin-left: 20px;
+            margin-bottom: 8px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #ddd;
+            margin-top: 20px;
+            border-top: 2px solid #ccc;
+        }
+
+        /* Attribute selector example */
+        input[type="text"] {
+            border: 1px solid #333;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1 style="color:darkgreen; font-family: Arial, sans-serif;">Kema Noodles Recipe</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#Ingredients">Ingredients</a>
+        <a href="#Steps">Steps</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <article>
+            <!-- Ingredients Section -->
+            <section id="Ingredients" class="recipe-section">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Noodles - 200g</li>
+                    <li>Minced meat - 100g</li>
+                    <li>Onion - 1, chopped</li>
+                    <li>Garlic - 2 cloves</li>
+                    <li>Soy sauce - 2 tbsp</li>
+                    <li>Vegetables - as desired</li>
+                </ul>
+            </section>
+
+            <!-- Steps Section -->
+            <section id="Steps" class="recipe-section">
+                <h2>Steps</h2>
+                <div>
+                    <ol>
+                        <li>Boil noodles and set aside.</li>
+                        <li>In a pan, sauté onion and garlic.</li>
+                        <li>Add minced meat and cook thoroughly.</li>
+                        <li>Add vegetables and soy sauce, stir well.</li>
+                        <li>Mix in the boiled noodles and cook for 2-3 minutes.</li>
+                    </ol>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dipana Shrestha</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+ul li {
+    list-style: square;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
