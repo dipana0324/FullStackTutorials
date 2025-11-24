@@ -36,20 +36,19 @@ section {
     margin-top: 10px;
 }
 
-/* Contact form */
+
 form {
-    margin: 0 auto;              /* center the form horizontally */
+    margin: 0 auto;              
     width: 300px;
     padding: 15px;
     background-color: rgba(255,255,255,0.1);
     border-radius: 5px;
-    text-align: left;            /* align labels and inputs nicely */
+    text-align: left;            
 }
 
 /* Inputs and textarea */
 input, textarea {
-    width: 100%;                 /* fill the form width */
-    padding: 6px;
+    width: 100%;                 
     margin: 5px 0;
     border: none;
     border-radius: 3px;
