@@ -1,58 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="./MyPortfolio/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Dipana Shrestha — Frontend Developer & UI/UX Enthusiast" />
+  <meta name="keywords" content="Dipana Shrestha, portfolio, frontend developer, UI/UX, web design" />
+
+  <title>Dipana Shrestha — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-	<header>
-		<div id="title">
-			<h1>Hi! I am Dipana Shrestha.</h1>
-			<p>Welcome to my portfolio.</p>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
 
-			<nav>
-				<a href="https://github.com/dipana0324">GitHub</a>
-				<a href="https://www.linkedin.com/in/dipana-shrestha-ba6774261/">LinkedIn</a>
-			</nav>
-		</div>
-	</header>
+  <header id="hero">
 
-	<main>
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline id="video-background">
+      <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+      <p>Your browser does not support the video element.</p>
+    </video>
 
-		<section id="about">
-			<h2>About Me</h2>
-			<p>I am Dipana Shrestha, a student learning web development.</p>
-		</section>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main Navigation">
+      <span class="logo">Dipana Shrestha</span>
 
-		<section id="projects">
-			<h2>My Projects</h2>
-			<div class="project">
-				<img src="Image/project1.png" alt="My first project" width="200">
-				<p>This is my first project screenshot.</p>
-			</div>
-		</section>
+      <button id="menu-button" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        ☰
+      </button>
 
-		<section id="contact">
-			<h2>Contact Me</h2>
-			<form>
-        <label for="fname">Name:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="Your name"><br><br>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Your email"><br><br>
+    <!-- Hero Section -->
+    <div class="hero-content">
+      <h1>Hi — I'm Dipana</h1>
+      <p>Frontend Developer & UI/UX Enthusiast</p>
+      <a href="#projects" class="cta">See My Work</a>
+    </div>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea><br><br>
+  </header>
 
-        <button type="submit">Send</button>
-    </form>
-		</section>
+  <main>
 
-	</main>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m Dipana Shrestha, a dedicated student from Nepal with a strong interest in technology and creative problem-solving. 
+        I enjoy learning new skills in web development, programming, and data analysis, and I’m passionate about applying what I learn to real-world projects.
+      </p>
+    </section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-row">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3 (Flexbox & Grid)</div>
+        <div class="skill">JavaScript (DOM)</div>
+        <div class="skill">Responsive Design</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div id="projects-grid">
+
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive portfolio built with HTML, CSS, and vanilla JavaScript.</p>
+          <a href="#" class="project-link">View →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Online Doctor System (Prototype)</h3>
+          <p>Wireframes and design for appointment booking and doctor profiles.</p>
+          <a href="#" class="project-link">View →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Quiz App</h3>
+          <p>Java-based quiz application with MySQL backend (student project).</p>
+          <a href="#" class="project-link">View →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <form id="contact-form" aria-label="Contact Form" novalidate>
+
+        <label for="name">Name *</label>
+        <input id="name" type="text" name="name" required aria-required="true" />
+        <span id="error-name" class="error-text"></span>
+
+        <label for="email">Email *</label>
+        <input id="email" type="email" name="email" required aria-required="true" />
+        <span id="error-email" class="error-text"></span>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+        <span id="error-message" class="error-text"></span>
+
+        <div id="form-message" role="status" aria-live="polite"></div>
+
+        <button type="submit" class="btn">Send</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Dipana Shrestha • Built with ♥</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
