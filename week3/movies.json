@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "I",
+      "year": 2005,
+      "genre": "Thriller"
+    },
+    {
+      "id": "2",
+      "title": "Puspha",
+      "year": 2006,
+      "genre": "Friends"
+    }
+  ]
+}
